@@ -1,0 +1,43 @@
+{
+  "name": "@workspace/ui",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "exports": {
+    "./globals.css": "./src/styles/globals.css",
+    "./lib/*": "./src/lib/*.ts",
+    "./utils/*": "./src/lib/utils/*.ts",
+    "./components/*": "./src/components/*.tsx"
+  },
+  "scripts": {
+    "lint": "pnpm lint:biome && pnpm lint:tsc",
+    "lint:biome": "pnpm /^lint:biome:.+/",
+    "lint:biome:lint": "biome lint .",
+    "lint:biome:format": "biome format .",
+    "lint:tsc": "tsc --noEmit",
+    "clean": "rm -rf .turbo"
+  },
+  "dependencies": {
+    "@remixicon/react": "^4.6.0",
+    "@tailwindcss/vite": "^4.0.7",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "radix-ui": "^1.4.2",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "tailwind-merge": "^3.0.1",
+    "tailwindcss": "^4.0.7"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.4",
+    "@types/react": "^19.1.6",
+    "@types/react-dom": "^19.1.6",
+    "@vitejs/plugin-react-swc": "^3.5.0",
+    "@workspace/typescript-config": "workspace:*",
+    "globals": "^15.14.0",
+    "tw-animate-css": "^1.2.4",
+    "typescript": "~5.7.2",
+    "vite": "^6.2.6",
+    "vite-tsconfig-paths": "^5.1.4"
+  }
+}
